@@ -1,7 +1,13 @@
 #root {
   margin: 0;
   padding: none;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  font-family: 'Tajawal';
+  font-weight: 400;
+}
+
+.title {
+  font-family: 'Dancing Script';
 }
 
 .navbar > .container-md{
@@ -40,6 +46,11 @@
   float: right;
 }
 
+.btn {
+  border-color: #c84771;
+  background-color: #c84771;
+}
+
 .footer-item:visited {
   color: inherit;
 }
@@ -68,18 +79,8 @@
     font-size: 0.8rem;
   }
 
-  .me-pic {
-    display:none
-  }
-
   #about, #services, #turnos {
     padding:0 !important;
-  }
-
-  .service-item {
-    margin-top: 0 !important;
-    padding-top:0.5rem !important;
-    padding-bottom:0.5rem !important;
   }
 
   #turnos {

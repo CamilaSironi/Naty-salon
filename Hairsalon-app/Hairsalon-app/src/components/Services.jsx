@@ -26,10 +26,10 @@ import tratam4 from '../images/tratam4.jpg';
 function Services() {
     return(
         <Container id="services" className="p-5">
-            <h1 className='text-center'>Servicios</h1>
+            <h1 className='title text-center'>Servicios</h1>
             <Row>
                 <Col className="service-item text-end mt-5 p-5">
-                    <h2 className=''>LAVADO</h2>
+                    <h3>LAVADO</h3>
                     <p>
                     Lavo tu cabello con productos de alta calidad para asegurarme de que esté limpio y manejable.<br/>
                     Este paso incluye un masaje relajante del cuero cabelludo.
@@ -45,7 +45,7 @@ function Services() {
                     <Image className='shadow mb-5 rounded' src={secado} fluid />
                 </Col>
                 <Col className="service-item text-start mt-5 p-5">
-                    <h2 className=''>SECADO</h2>
+                    <h3>SECADO</h3>
                     <p>
                         El secado profesional es la clave para lograr un acabado pulido y duradero.<br/>
                         Aplico productos para proteger tu cabello del calor y mejorar su textura y brillo y luego lo seco logrando el estilo deseado, ya sea liso, ondulado o con volumen.        
@@ -55,7 +55,7 @@ function Services() {
 
             <Row>
                 <Col className="service-item text-end mt-5 p-5">
-                    <h2 className=''>CORTE</h2>
+                    <h3>CORTE</h3>
                     <p>
                         Con un buen corte de pelo logramos un look fresco y renovado.<br/>
                         Para mí, cada corte de pelo es un proceso personalizado y detallado, para realzar tus rasgos, adaptarse a tu tipo de pelo y a tu estilo de vida.
@@ -84,7 +84,7 @@ function Services() {
                     </Carousel> 
                 </Col>
                 <Col className="service-item text-start mt-5 p-5">
-                    <h2 className=''>COLOR</h2>
+                    <h3>COLOR</h3>
                     <p>
                         Según tus preferencias y objetivos, discutimos las opciones de color, las tendencias actuales y cómo el color elegido complementará tu estilo.<br/>
                         Después evaluamos la salud de tu cabello y lo preparamos adecuadamente para el proceso de coloración, asegurando resultados óptimos y duraderos.
@@ -94,7 +94,7 @@ function Services() {
 
             <Row>
                 <Col className="service-item text-end mt-5 p-5">
-                    <h2 className=''>PEINADOS</h2>
+                    <h3>PEINADOS</h3>
                     <p>
                         Ya sea un peinado elegante, un estilo moderno o un look natural, vamos a encontrar el estilo perfecto.<br/>
                         Finalizamos el peinado con productos específicos que aseguran que se mantenga perfecto durante todo el evento y te doy consejos sobre cómo mantenerlo y posibles retoques.
@@ -148,7 +148,7 @@ function Services() {
                     </Carousel> 
                 </Col>
                 <Col className="service-item text-start mt-5 p-5">
-                    <h2 className=''>TRATAMIENTOS</h2>
+                    <h3>TRATAMIENTOS</h3>
                     <p>
                         Cada tratamiento es personalizado según las necesidades específicas de cada pelo, ya sea:
                     </p>

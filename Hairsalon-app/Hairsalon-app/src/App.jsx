@@ -7,6 +7,7 @@ import Services from './components/Services';
 import Footer from './components/Footer';
 import FloatingButton from './components/FloatingButton';
 import DatePicker from './components/DatePicker';
+import Voucher from './components/Voucher';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <About/>
         <Services/>
         <DatePicker/>
+        <Voucher/>
         <Footer/>
         <FloatingButton/>
       </main>
