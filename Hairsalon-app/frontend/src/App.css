@@ -1,0 +1,113 @@
+#root {
+  margin: 0;
+  padding: none;
+  font-size: 1.2rem;
+  font-family: 'Tajawal';
+  font-weight: 400;
+}
+
+.title {
+  font-family: 'Dancing Script';
+}
+
+.navbar > .container-md{
+  --bs-gutter-x: 6rem;
+  flex-wrap: wrap;
+}
+
+.logo {
+  max-width: 300px;
+  width:100%;
+}
+
+.dropdown-menu {
+  --bs-dropdown-min-width: 5rem;
+  overflow-x: none;
+}
+
+.ratio {
+  position: relative;
+  top: 0;
+}
+
+.embed-responsive{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card-img {
+  max-width:200px;
+  float : left;
+}
+
+.card-text {
+  float: right;
+}
+
+.btn {
+  border-color: #c84771;
+  background-color: #c84771;
+}
+
+#voucher {
+  background-color: #f8e9ee;
+}
+
+.footer-item:visited {
+  color: inherit;
+}
+
+.floating-btn {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  border-radius: 50px;
+  border-color: #25d366;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+}
+
+.floating-btn:hover {
+  background-color: #25d366;
+  border-color: #25d366;
+}
+
+
+@media only screen and (max-width: 450px) {
+  #root {
+    font-size: 0.8rem;
+  }
+
+  #about, #services, #turnos {
+    padding:0 !important;
+  }
+
+  #turnos {
+    padding:0.5rem !important;
+  }
+
+  .form-control {
+    width: 75% !important;
+  }
+
+  .footer {
+    flex-direction: column !important;
+  }
+
+  .floating-btn {
+    width: 40px;
+    height: 40px;
+    bottom: 20px;
+    right: 20px;
+    padding: 0;
+  }
+
+  .floating-icon {
+    padding: 10px !important;
+  }
+}
