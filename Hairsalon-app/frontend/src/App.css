@@ -46,13 +46,24 @@
   float: right;
 }
 
-.btn {
+.btn, .btn:hover {
   border-color: #c84771;
   background-color: #c84771;
+  color: white;
 }
 
-#voucher {
-  background-color: #f8e9ee;
+.btn a, .btn a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+#ok-btn:disabled {
+  border-color: gray;
+  background-color: gray;
+}
+
+.hidden {
+  display: none;
 }
 
 .footer-item:visited {
