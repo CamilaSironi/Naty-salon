@@ -6,7 +6,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 function Header() {
     return (
     <Navbar className="navbar p-1 bg-white">
-      <Container fluid="md">
+      <Container id="header" fluid="md">
 
         <Navbar.Brand href="#home">
             <img src={logo} className="logo img-fluid float-start" alt="logo"/>

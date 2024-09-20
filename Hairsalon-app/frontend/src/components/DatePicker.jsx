@@ -80,7 +80,7 @@ function DatePicker() {
     <Container id="turnos" className="mt-5 mb-5 p-5">
     <h1 className='title'>Agendá tu turno:</h1>
 
-        <Row>
+        <Row xs={1} md={2}>
             <Col className="form-item">
                 <Form onSubmit={handleSubmit}>
                     <Form.Group 

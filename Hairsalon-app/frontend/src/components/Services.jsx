@@ -20,14 +20,14 @@ import peinado7 from '../images/peinado7.jpg';
 import peinado8 from '../images/peinado8.jpg';
 import tratam1 from '../images/tratam1.jpg';
 import tratam2 from '../images/tratam2.jpg';
-import tratam3 from '../images/tratam3.jpg';
+import tratam3 from '../images/tratam3.png';
 import tratam4 from '../images/tratam4.jpg';
 
 function Services() {
     return(
         <Container id="services" className="p-5">
             <h1 className='title text-center'>Servicios</h1>
-            <Row>
+            <Row xs={1} md={2}>
                 <Col className="service-item text-end mt-5 p-5">
                     <h3>LAVADO</h3>
                     <p>
@@ -35,14 +35,14 @@ function Services() {
                     Este paso incluye un masaje relajante del cuero cabelludo.
                     </p>
                 </Col>
-                <Col className="service-item  mt-5 p-5">
-                    <Image className='shadow mb-5 rounded' src={lavado} fluid />
+                <Col className="service-item  mt-5  mb-5 p-5">
+                    <Image className='shadow rounded' src={lavado} fluid />
                 </Col>
             </Row>
 
-            <Row>
-                <Col className="service-item mt-5 p-5">
-                    <Image className='shadow mb-5 rounded' src={secado} fluid />
+            <Row xs={1} md={2}> 
+                <Col className="service-item mt-5 mb-5 p-5">
+                    <Image className='shadow rounded' src={secado} fluid />
                 </Col>
                 <Col className="service-item text-start mt-5 p-5">
                     <h3>SECADO</h3>
@@ -53,7 +53,7 @@ function Services() {
                 </Col>
             </Row>
 
-            <Row>
+            <Row xs={1} md={2}>
                 <Col className="service-item text-end mt-5 p-5">
                     <h3>CORTE</h3>
                     <p>
@@ -61,25 +61,25 @@ function Services() {
                         Para mí, cada corte de pelo es un proceso personalizado y detallado, para realzar tus rasgos, adaptarse a tu tipo de pelo y a tu estilo de vida.
                     </p>
                 </Col>
-                <Col className="service-item mt-5 p-5">
-                    <Image className='shadow mb-5 rounded' src={corte} fluid />
+                <Col className="service-item mt-5 mb-5 p-5">
+                    <Image className='shadow rounded' src={corte} fluid />
                 </Col>
             </Row>
 
-            <Row>
-                <Col className="service-item mt-5 p-5">
+            <Row xs={1} md={2}>
+                <Col className="service-item mt-5 mb-5 p-5">
                     <Carousel>
                         <Carousel.Item>
-                            <Image className='shadow mb-5 rounded' src={color1} fluid />
+                            <Image className='shadow rounded' src={color1} fluid />
                         </Carousel.Item>
                         <Carousel.Item>
-                            <Image className='shadow mb-5 rounded' src={color2} fluid />
+                            <Image className='shadow rounded' src={color2} fluid />
                         </Carousel.Item>
                         <Carousel.Item>
-                            <Image className='shadow mb-5 rounded' src={color3} fluid />
+                            <Image className='shadow rounded' src={color3} fluid />
                         </Carousel.Item>
                         <Carousel.Item>
-                            <Image className='shadow mb-5 rounded' src={color4} fluid />
+                            <Image className='shadow rounded' src={color4} fluid />
                         </Carousel.Item>
                     </Carousel> 
                 </Col>
@@ -92,7 +92,7 @@ function Services() {
                 </Col>
             </Row>
 
-            <Row>
+            <Row xs={1} md={2}>
                 <Col className="service-item text-end mt-5 p-5">
                     <h3>PEINADOS</h3>
                     <p>
@@ -100,50 +100,50 @@ function Services() {
                         Finalizamos el peinado con productos específicos que aseguran que se mantenga perfecto durante todo el evento y te doy consejos sobre cómo mantenerlo y posibles retoques.
                     </p>
                 </Col>
-                <Col className="service-item mt-5 p-5">
+                <Col className="service-item mt-5 mb-5 p-5">
                     <Carousel>
                         <Carousel.Item>
-                            <Image className='shadow mb-5 rounded' src={peinado1} fluid />
+                            <Image className='shadow rounded' src={peinado1} fluid />
                         </Carousel.Item>
                         <Carousel.Item>
-                            <Image className='shadow mb-5 rounded' src={peinado2} fluid />
+                            <Image className='shadow rounded' src={peinado2} fluid />
                         </Carousel.Item>
                         <Carousel.Item>
-                            <Image className='shadow mb-5 rounded' src={peinado3} fluid />
+                            <Image className='shadow rounded' src={peinado3} fluid />
                         </Carousel.Item>
                         <Carousel.Item>
-                            <Image className='shadow mb-5 rounded' src={peinado4} fluid />
+                            <Image className='shadow rounded' src={peinado4} fluid />
                         </Carousel.Item>
                         <Carousel.Item>
-                            <Image className='shadow mb-5 rounded' src={peinado5} fluid />
+                            <Image className='shadow rounded' src={peinado5} fluid />
                         </Carousel.Item>
                         <Carousel.Item>
-                            <Image className='shadow mb-5 rounded' src={peinado6} fluid />
+                            <Image className='shadow rounded' src={peinado6} fluid />
                         </Carousel.Item>
                         <Carousel.Item>
-                            <Image className='shadow mb-5 rounded' src={peinado7} fluid />
+                            <Image className='shadow rounded' src={peinado7} fluid />
                         </Carousel.Item>
                         <Carousel.Item>
-                            <Image className='shadow mb-5 rounded' src={peinado8} fluid />
+                            <Image className='shadow rounded' src={peinado8} fluid />
                         </Carousel.Item>
                     </Carousel> 
                 </Col>
             </Row>
 
-            <Row>
-                <Col className="service-item mt-5 p-5">
+            <Row xs={1} md={2}>
+                <Col className="service-item mt-5 mb-5 p-5">
                     <Carousel>
                         <Carousel.Item>
-                            <Image className='shadow mb-5 rounded' src={tratam1} fluid />
+                            <Image className='shadow rounded' src={tratam1} fluid />
                         </Carousel.Item>
                         <Carousel.Item>
-                            <Image className='shadow mb-5 rounded' src={tratam2} fluid />
+                            <Image className='shadow rounded' src={tratam2} fluid />
                         </Carousel.Item>
                         <Carousel.Item>
-                            <Image className='shadow mb-5 rounded' src={tratam3} fluid />
+                            <Image className='shadow rounded' src={tratam3} fluid />
                         </Carousel.Item>
                         <Carousel.Item>
-                            <Image className='shadow mb-5 rounded' src={tratam4} fluid />
+                            <Image className='shadow rounded' src={tratam4} fluid />
                         </Carousel.Item>
                     </Carousel> 
                 </Col>

@@ -34,7 +34,7 @@ function Voucher() {
         const voucherElement = document.getElementById("voucher-form");
         voucherElement.classList.toggle("hidden");
         
-        const col2 = document.getElementById('voucher-col-2');
+        const col2 = document.getElementById('voucher-col2');
         col2.insertAdjacentHTML('afterbegin', `
           <div id="parent">
     
@@ -75,13 +75,13 @@ function Voucher() {
     }
 
     return(
-        <Container id="voucher" className="mt-5 mb-5 p-5 rounded">
+        <Container id="voucher" className="mt-5 mb-5 p-5">
             <Row>
-                <Col className="p-5">
+                <Col id="voucher-img" className="p-5">
                     <Image className='shadow mb-5 rounded' src={logo} fluid />
                 </Col>
 
-                <Col id="voucher-col-2" className="p-5">
+                <Col id="voucher-col2" className="p-5">
                     <div id="voucher-form">
                         <h1 className='title'>Regalá un voucher!</h1>
 
