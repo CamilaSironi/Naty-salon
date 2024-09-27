@@ -202,6 +202,7 @@ main {
   animation-timeline: --left;
   animation-name: slideRight;
   animation-range: entry 25% cover 50%;
+  animation-fill-mode: both;
 }
 
 .right {
@@ -211,6 +212,7 @@ main {
   animation-timeline: --right;
   animation-name: slideLeft;
   animation-range: entry 25% cover 50%;
+  animation-fill-mode: both;
 }
 
 
