@@ -171,7 +171,7 @@ main {
 @keyframes slideRight {
   from {
     opacity: 0;
-    transform: translateX(-100%);
+    transform: translateX(-40%);
     transition: all 0.5s;
   }
 
@@ -184,7 +184,7 @@ main {
 @keyframes slideLeft {
   from {
     opacity: 0;
-    transform: translateX(+100%);
+    transform: translateX(+40%);
     transition: all 0.5s;
   }
 
@@ -285,4 +285,17 @@ img, .carousel {
   .floating-icon {
     padding: 10px !important;
   }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d3d3d3;
+  border-radius: 10px;
 }
