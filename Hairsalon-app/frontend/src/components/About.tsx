@@ -6,7 +6,7 @@ import pic from '../images/me.png'
 
 function About() {
     return(
-        <Container id="about" className="pt-5 pb-5">
+        <Container id="about" className="mt-5 mb-5 pt-5 pb-5">
             <Row id="about-row" xs={1} md={2}>
                 <Col id="about-col1" className="me-pic mt-5 p-4">
                     <Image className='shadow mb-5 rounded mx-auto d-block' src={pic} fluid />

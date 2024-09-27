@@ -2,8 +2,17 @@ import logo from '../images/logo.png'
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import LoginModal from './LoginModal';
+import LogoutModal from './LogoutModal';
+import { useKindeAuth } from "@kinde-oss/kinde-auth-react"
 
 function Header() {
+
+  const {
+    isAuthenticated,
+    isLoading
+  } = useKindeAuth();
+
     return (
     <Navbar className="navbar p-1 bg-white">
       <Container id="header" fluid="md">
@@ -19,7 +28,16 @@ function Header() {
               <NavDropdown.Item href="#voucher">Voucher</NavDropdown.Item>
               <NavDropdown.Item href="#contact">Contacto</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#login">Ingresar</NavDropdown.Item>
+              <NavDropdown.Item href="#login">
+                {
+                  isLoading ? null 
+                  : isAuthenticated ? (
+                      <LogoutModal/>
+                    ) : (
+                      <LoginModal/>
+                    )
+                }    
+              </NavDropdown.Item>
         </NavDropdown>
 
       </Container>

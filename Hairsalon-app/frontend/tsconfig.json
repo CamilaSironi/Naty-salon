@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+      "target": "ES6",
+      "useDefineForClassFields": true,
+      "lib": ["ES6", "ES2021.String", "DOM", "DOM.Iterable"],
+      "module": "ESNext",
+      "skipLibCheck": true,
+      "moduleResolution": "bundler",
+      "outDir": "./dist", // Specify the output folder for compiled JavaScript
+      "allowJs": true,
+      "allowImportingTsExtensions": true,
+      "isolatedModules": true,
+      "moduleDetection": "force",
+      "noEmit": true,
+      "jsx": "react-jsx",
+      "strict": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "noFallthroughCasesInSwitch": true,
+      "types": [
+          "vite/client",
+          "node"
+      ]
+    },
+    "include": ["src"] // Specify the path to your TypeScript files
+}

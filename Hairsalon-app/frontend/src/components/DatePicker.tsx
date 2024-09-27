@@ -1,9 +1,6 @@
-import Container from 'react-bootstrap/Container';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import {Container, Button, Form, Row, Col} from 'react-bootstrap';
 import { useState } from 'react';
+import {useKindeAuth} from "@kinde-oss/kinde-auth-react";
 
 function DatePicker() {
 
@@ -14,67 +11,71 @@ function DatePicker() {
       message:""
     });
 
-  /*const getValidationState = () => { 
-      //validar que inicio sesion
-      if (esta conectado) return 'success';
-      else return 'error';
+    const { 
+      isLoading,
+      user, 
+      login
+  } = useKindeAuth();
 
-      y desp esto va abajo de form.label: <ControlLabel>esto es el mensaje:{validationState}</ControlLabel>
-    }*/
-
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<any>) => {
     const key = e.target.name;
     const value = e.target.value;
     setData({...data, [key]: value})
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
-    const message = "Me gustaría reservar un turno si tenés libre para el dia "+data.date+" a la "+data.time+". "+data.message;
-    const URI = encodeURIComponent(message).replaceAll('+','%20');
+    if (isLoading ? null : user){
+        const message = "Me gustaría reservar un turno si tenés libre para el dia "+data.date+" a la "+data.time+". "+data.message;
+        const URI = encodeURIComponent(message).replaceAll('+','%20');
 
-    document.getElementById("ok-btn").disabled = true;
+        (document.getElementById("ok-btn")! as HTMLButtonElement).disabled = true;
 
-    const col2 = document.getElementById('form-col-2');
-    col2.insertAdjacentHTML('afterbegin', `
-      <div id="parent">
+        const col2 = document.getElementById('form-col-2');
+        col2!.insertAdjacentHTML('afterbegin', `
+        <div id="parent">
 
-          <div id="child1">
-              <h2 className='title'>Revisá tu mensaje antes de enviarlo:</h2>
-              <p>${message}</p>
-          </div>
+            <div id="child1">
+                <h2 className='title'>Revisá tu mensaje antes de enviarlo:</h2>
+                <p>${message}</p>
+            </div>
 
-          <div id="child2">
-              <button id="btn1" class='btn shadow'>Corregir</button>
-              <button id="btn2" class='btn shadow'><a href='https://wa.me/+5492262551283?text=Hola%20Naty!%20+${URI}' target='blank'>Enviar</a></button>
-          </div>
+            <div id="child2">
+                <button id="btn1" class='btn shadow'>Corregir</button>
+                <button id="btn2" class='btn shadow'><a href='https://wa.me/+5492262551283?text=Hola%20Naty!%20+${URI}' target='blank'>Enviar</a></button>
+            </div>
 
-      </div>`
-    );
+        </div>`)
 
-    const removeMessage = () => {
-      col2.removeChild(document.getElementById("parent"));
-      document.getElementById("ok-btn").disabled = false;
+        const removeMessage = () => {
+          col2!.removeChild(document.getElementById("parent")!);
+          (document.getElementById("ok-btn")! as HTMLButtonElement).disabled = false;
+        }
+    
+        const sendMessage = () => {
+          removeMessage();
+          setData({
+            date: "",
+            time: "",
+            message:""
+          })
+        }
+    
+        const btn1 = document.getElementById("btn1");
+        btn1!.addEventListener("click", function(){
+            removeMessage()});
+    
+        const btn2 = document.getElementById("btn2");
+        btn2!.addEventListener("click", function(){
+            sendMessage()});
+
+    } 
+    else {
+      login();
     }
-
-    const sendMessage = () => {
-      removeMessage();
-      setData({
-        date: "",
-        time: "",
-        message:""
-      })
-    }
-
-    const btn1 = document.getElementById("btn1");
-    btn1.addEventListener("click", function(){
-        removeMessage()});
-
-    const btn2 = document.getElementById("btn2");
-    btn2.addEventListener("click", function(){
-        sendMessage()});
   }
+
 
   return (
     <Container id="turnos" className="mt-5 mb-5 p-5">
@@ -84,8 +85,7 @@ function DatePicker() {
             <Col className="form-item">
                 <Form onSubmit={handleSubmit}>
                     <Form.Group 
-                      className="m-3" 
-                      //validationState={this.getValidationState()}
+                      className="m-3 left"
                     > 
                       <Form.Label>Elegí una fecha:</Form.Label>
                       <Form.Control 
@@ -99,8 +99,7 @@ function DatePicker() {
                     </Form.Group>
 
                     <Form.Group 
-                      className="m-3" 
-                      //validationState={this.getValidationState()}
+                      className="m-3 left" 
                     >
                         <Form.Label htmlFor="select">Elegí un horario</Form.Label>
                         <Form.Select 
@@ -118,8 +117,7 @@ function DatePicker() {
                       </Form.Group>
 
                     <Form.Group 
-                      className="m-3" 
-                      //validationState={this.getValidationState()}
+                      className="m-3 left" 
                     >
                       <Form.Label>Dejame tu mensaje: (opcional)</Form.Label>
                       <Form.Control 
@@ -135,7 +133,6 @@ function DatePicker() {
                     <Button id="ok-btn" variant="primary" type="submit" className='btn shadow'>Ok</Button>
                     </Form>
             </Col>
-
             <Col id="form-col-2" className="p-5"></Col>
             </Row>
 

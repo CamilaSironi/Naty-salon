@@ -28,9 +28,9 @@ function Services() {
         <Container id="services" className="p-5">
             <h1 className='title text-center'>Servicios</h1>
             <Row xs={1} md={2}>
-                <Col className="service-item text-end mt-5 p-5">
+                <Col className="service-item lavado text-end mt-5 p-5">
                     <h3>LAVADO</h3>
-                    <p>
+                    <p  className='left'>
                     Lavo tu cabello con productos de alta calidad para asegurarme de que esté limpio y manejable.<br/>
                     Este paso incluye un masaje relajante del cuero cabelludo.
                     </p>
@@ -46,7 +46,7 @@ function Services() {
                 </Col>
                 <Col className="service-item text-start mt-5 p-5">
                     <h3>SECADO</h3>
-                    <p>
+                    <p className='right'>
                         El secado profesional es la clave para lograr un acabado pulido y duradero.<br/>
                         Aplico productos para proteger tu cabello del calor y mejorar su textura y brillo y luego lo seco logrando el estilo deseado, ya sea liso, ondulado o con volumen.        
                     </p>
@@ -54,9 +54,9 @@ function Services() {
             </Row>
 
             <Row xs={1} md={2}>
-                <Col className="service-item text-end mt-5 p-5">
+                <Col className="service-item corte text-end mt-5 p-5">
                     <h3>CORTE</h3>
-                    <p>
+                    <p className='left'>
                         Con un buen corte de pelo logramos un look fresco y renovado.<br/>
                         Para mí, cada corte de pelo es un proceso personalizado y detallado, para realzar tus rasgos, adaptarse a tu tipo de pelo y a tu estilo de vida.
                     </p>
@@ -83,9 +83,9 @@ function Services() {
                         </Carousel.Item>
                     </Carousel> 
                 </Col>
-                <Col className="service-item text-start mt-5 p-5">
+                <Col className="service-item color text-start mt-5 p-5">
                     <h3>COLOR</h3>
-                    <p>
+                    <p className='right'>
                         Según tus preferencias y objetivos, discutimos las opciones de color, las tendencias actuales y cómo el color elegido complementará tu estilo.<br/>
                         Después evaluamos la salud de tu cabello y lo preparamos adecuadamente para el proceso de coloración, asegurando resultados óptimos y duraderos.
                     </p>
@@ -93,9 +93,9 @@ function Services() {
             </Row>
 
             <Row xs={1} md={2}>
-                <Col className="service-item text-end mt-5 p-5">
+                <Col className="service-item peinados text-end mt-5 p-5">
                     <h3>PEINADOS</h3>
-                    <p>
+                    <p className='left'>
                         Ya sea un peinado elegante, un estilo moderno o un look natural, vamos a encontrar el estilo perfecto.<br/>
                         Finalizamos el peinado con productos específicos que aseguran que se mantenga perfecto durante todo el evento y te doy consejos sobre cómo mantenerlo y posibles retoques.
                     </p>
@@ -149,10 +149,10 @@ function Services() {
                 </Col>
                 <Col className="service-item text-start mt-5 p-5">
                     <h3>TRATAMIENTOS</h3>
-                    <p>
+                    <p className='right'>
                         Cada tratamiento es personalizado según las necesidades específicas de cada pelo, ya sea:
                     </p>
-                    <ul>
+                    <ul className='right'>
                         <li>Suavizar y alisar el cabello, reducir el frizz y mejorar su manejabilidad.</li>
                         <li>Realzar el brillo natural de tu cabello, dejándolo más luminoso y saludable.</li>
                         <li>Restaurar la humedad en el cabello seco y dañado, dejándolo suave, flexible y revitalizado.</li>

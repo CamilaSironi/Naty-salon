@@ -5,7 +5,7 @@ import {Instagram} from 'react-bootstrap-icons';
 
 function Footer() {
     return(
-        <Container id='contact' className="footer p-4 bg-white shadow mt-5 d-flex flex-row" fluid>
+        <Container id='contact' className="footer p-4 bg-transparent shadow d-flex flex-row" fluid>
             <h2>Contactame:</h2>
             <div>
                 <a href='https://www.facebook.com/natalia.baran.3?locale=es_LA' target='_blank' className='footer-item'><Facebook size={42} className='ps-2 pe-2'/></a>

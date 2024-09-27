@@ -7,15 +7,11 @@ import reactRefresh from 'eslint-plugin-react-refresh'
 export default [
   { ignores: ['dist'] },
   {
-    files: ['**/*.{js,jsx}'],
+    extends: [js.configs.recommended, ...tseslint.configs.recommended],
+    files: ['**/*.{ts,tsx}'],
     languageOptions: {
-      ecmaVersion: 2020,
+      ecmaVersion: 2021,
       globals: globals.browser,
-      parserOptions: {
-        ecmaVersion: 'latest',
-        ecmaFeatures: { jsx: true },
-        sourceType: 'module',
-      },
     },
     settings: { react: { version: '18.3' } },
     plugins: {
@@ -24,10 +20,11 @@ export default [
       'react-refresh': reactRefresh,
     },
     rules: {
-      ...js.configs.recommended.rules,
       ...react.configs.recommended.rules,
-      ...react.configs['jsx-runtime'].rules,
+      ...react.configs['tsx-runtime'].rules,
       ...reactHooks.configs.recommended.rules,
+      "no-alert": "off",
+      "padded-blocks": "off",
       'react/jsx-no-target-blank': 'off',
       'react-refresh/only-export-components': [
         'warn',

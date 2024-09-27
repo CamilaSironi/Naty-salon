@@ -14,7 +14,6 @@ function App() {
   return (
     <>
       <main>
-
         <Header />
         <Hero/>
         <About/>
