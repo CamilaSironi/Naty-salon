@@ -149,17 +149,19 @@ function Services() {
                 </Col>
                 <Col className="service-item text-start mt-5 p-5">
                     <h3>TRATAMIENTOS</h3>
-                    <p className='right'>
-                        Cada tratamiento es personalizado según las necesidades específicas de cada pelo, ya sea:
-                    </p>
-                    <ul className='right'>
-                        <li>Suavizar y alisar el cabello, reducir el frizz y mejorar su manejabilidad.</li>
-                        <li>Realzar el brillo natural de tu cabello, dejándolo más luminoso y saludable.</li>
-                        <li>Restaurar la humedad en el cabello seco y dañado, dejándolo suave, flexible y revitalizado.</li>
-                        <li>Aportar nutrientes esenciales al cabello, fortaleciendo y mejorando su textura.</li>
-                        <li>Reparar el daño causado por tratamientos químicos, calor y factores ambientales.</li>
-                        <li>Reconstruir la estructura interna del cabello, mejorando su resistencia y elasticidad.</li>
-                    </ul>
+                    <div className='right'>
+                        <p>
+                            Cada tratamiento es personalizado según las necesidades específicas de cada pelo, ya sea:
+                        </p>
+                        <ul>
+                            <li>Suavizar y alisar el cabello, reducir el frizz y mejorar su manejabilidad.</li>
+                            <li>Realzar el brillo natural de tu cabello, dejándolo más luminoso y saludable.</li>
+                            <li>Restaurar la humedad en el cabello seco y dañado, dejándolo suave, flexible y revitalizado.</li>
+                            <li>Aportar nutrientes esenciales al cabello, fortaleciendo y mejorando su textura.</li>
+                            <li>Reparar el daño causado por tratamientos químicos, calor y factores ambientales.</li>
+                            <li>Reconstruir la estructura interna del cabello, mejorando su resistencia y elasticidad.</li>
+                        </ul>
+                    </div>
                 </Col>
             </Row>
         </Container>

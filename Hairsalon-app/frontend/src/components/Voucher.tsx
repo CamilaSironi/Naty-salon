@@ -50,7 +50,7 @@ function Voucher() {
         
                 <div id="child2">
                     <button id="btn1" class='btn shadow'>Corregir</button>
-                    <button id="btn2" class='btn shadow'><a href='https://wa.me/+5492262551283?text=Hola%20Naty!%20+${URI}' target='blank'>Enviar</a></button>
+                    <button id="btn2" class='btn shadow'><a href='https://wa.me/+5492262485631?text=Hola%20Naty!%20+${URI}' target='blank'>Enviar</a></button>
                 </div>
         
             </div>`
@@ -89,13 +89,13 @@ function Voucher() {
                     <Image className='shadow rounded' src={logo} fluid />
                 </Col>
 
-                <Col id="voucher-col2" className="mt-5 p-5">
+                <Col id="voucher-col2" className="mt-5 p-5 right">
                     <div id="voucher-form">
                         <h1 className='title'>Regalá un voucher!</h1>
 
                         <Form onSubmit={handleSubmit}>
                             <Form.Group 
-                                className="m-3 right" 
+                                className="m-3" 
                             > 
                                 <Form.Label>Para:</Form.Label>
                                 <Form.Control 
@@ -109,7 +109,7 @@ function Voucher() {
                             </Form.Group>
 
                             <Form.Group 
-                                className="m-3 right" 
+                                className="m-3" 
                             >
                                 <Form.Label>Dejale un mensaje:</Form.Label>
                                 <Form.Control 

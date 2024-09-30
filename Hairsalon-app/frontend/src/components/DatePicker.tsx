@@ -43,7 +43,7 @@ function DatePicker() {
 
             <div id="child2">
                 <button id="btn1" class='btn shadow'>Corregir</button>
-                <button id="btn2" class='btn shadow'><a href='https://wa.me/+5492262551283?text=Hola%20Naty!%20+${URI}' target='blank'>Enviar</a></button>
+                <button id="btn2" class='btn shadow'><a href='https://wa.me/+5492262485631?text=Hola%20Naty!%20+${URI}' target='blank'>Enviar</a></button>
             </div>
 
         </div>`)
@@ -82,10 +82,10 @@ function DatePicker() {
     <h1 className='title'>Agendá tu turno:</h1>
 
         <Row xs={1} md={2}>
-            <Col className="form-item">
+            <Col className="form-item  left">
                 <Form onSubmit={handleSubmit}>
                     <Form.Group 
-                      className="m-3 left"
+                      className="m-3"
                     > 
                       <Form.Label>Elegí una fecha:</Form.Label>
                       <Form.Control 
@@ -99,7 +99,7 @@ function DatePicker() {
                     </Form.Group>
 
                     <Form.Group 
-                      className="m-3 left" 
+                      className="m-3" 
                     >
                         <Form.Label htmlFor="select">Elegí un horario</Form.Label>
                         <Form.Select 
@@ -117,7 +117,7 @@ function DatePicker() {
                       </Form.Group>
 
                     <Form.Group 
-                      className="m-3 left" 
+                      className="m-3" 
                     >
                       <Form.Label>Dejame tu mensaje: (opcional)</Form.Label>
                       <Form.Control 
